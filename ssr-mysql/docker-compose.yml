@@ -1,0 +1,6 @@
+version: '3'
+ services:
+   ssr-with-sspanel:
+     image: chawler/ssr-mysql
+     restart: always
+     network_mode: "host"
