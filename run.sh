@@ -30,9 +30,15 @@ rm -rf frp.tar.gz
 echo ""
 echo "后台运行 frp"
 nohup ./frp_0.13.0_linux_amd64/frps -c ./frp_0.13.0_linux_amd64/frps.ini &
-fi
+echo "配置 ssr-mysql"
 mkdir ssr-mysql
-curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/r3/frp.tar.gz -o frp.tar.gz
+cd ssr-mysql
+curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/ssr-mysql/docker-compose.yml -o docker-compose.yml
+docker-compose up -d
+echo ""
+echo "安装 nginx"
+apt install nginx -y
+fi
 
 if [ "${num}" == "0" ]
 then
