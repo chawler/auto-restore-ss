@@ -23,7 +23,7 @@ curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compos
 chmod +x /usr/local/bin/docker-compose
 echo ""
 echo "下载 frp"
-curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/r3/frp.tar.gz -o frp.tar.gz
+curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/frp.tar.gz -o frp.tar.gz
 tar zxf frp.tar.gz
 rm -rf frp.tar.gz
 echo ""
