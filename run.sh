@@ -14,7 +14,7 @@ echo "1：开始搞事情"
 echo "0:退出"
 read num
 
-if ["${num}" == "1"]; then
+if [ "$num" = "1" ]; then
 echo "安装 Docker"
 curl -fsSL https://get.docker.com/ | sh
 echo ""
@@ -46,6 +46,6 @@ ln -s ../sites-available/nds.zwd.life
 nginx reload
 fi
 
-if ["${num}" == "0"]; then
+if [ "$num" = "0" ]; then
 exit
 fi
