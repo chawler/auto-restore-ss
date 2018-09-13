@@ -28,7 +28,7 @@ tar zxf frp.tar.gz
 rm -rf frp.tar.gz
 echo ""
 echo "后台运行 frp"
-nohup ./frp_0.13.0_linux_amd64/frps -c ./frp_0.13.0_linux_amd64/frps.ini &
+cd frp_0.13.0_linux_amd64 && nohup ./frps -c ./frps.ini &
 echo "配置 ssr-mysql"
 mkdir ssr-mysql
 cd ssr-mysql
