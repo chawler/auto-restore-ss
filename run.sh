@@ -39,11 +39,11 @@ echo "安装 nginx"
 apt install nginx -y
 cd /etc/nginx/sites-available
 curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/nginx/nas.zwd.life -o nas.zwd.life
-curl https://github.com/chawler/auto-restore-ss/blob/master/nginx/nds.zwd.life -o nds.zwd.life
+curl https://raw.githubusercontent.com/chawler/auto-restore-ss/master/nginx/nds.zwd.life -o nds.zwd.life
 cd /etc/nginx/sites-enabled
 ln -s ../sites-available/nas.zwd.life
 ln -s ../sites-available/nds.zwd.life
-nginx reload
+service nginx reload
 fi
 
 if [ "$num" = "0" ]; then
